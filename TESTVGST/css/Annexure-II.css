@@ -1,0 +1,111 @@
+body
+{
+    background-color: #ffffff;
+ 
+}
+header
+{
+    background-color:#96beda;
+    text-transform: uppercase;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
+}   
+h1{
+    text-align: center;
+    font-size: 2.5vw;
+}
+h4,h3
+{
+    background-color:  #7e7e7e;
+    color: #ffffff;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 1vw 1vw 0 0;
+    text-align: center;
+}
+div.part1
+{
+    background: -webkit-linear-gradient(#e0e0e0 10%, #ffffff 100%);
+    font-size: 1.5vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+}
+div.part2
+{
+    border-radius: 1vw;
+    background: -webkit-linear-gradient(#e0e0e0 10%, #ffffff 100%);    display: block;
+}
+td,th,table
+{
+    border: 1px solid #000000 ;
+    font-size: 2vw;
+    margin: auto;
+}
+table.tab
+{
+    border: 0.3vw solid #000000;
+    border-color: #000000;
+    height: 50%;
+    width: auto;
+    padding: 2px;
+    border-collapse:collapse;
+}
+.submit
+{
+    margin-left: 44vw;
+    width: 10vw;
+    text-decoration: none;
+    text-align: center;
+    padding: 1vw;
+    border: none;
+    color: #ffffff;
+    background-color:#8b8b8b;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+  }
+a{
+    text-decoration: none;
+}
+  
+  .text{
+      border-radius: 1vw;
+      background: -webkit-linear-gradient(#e0e0e0 10%, #ffffff 100%);
+      text-align: justify;
+      font-size: 1.5vw;
+  }
+  .note{
+      font-size: 1.5vw;
+      background-color: beige;
+      padding: 1vw;
+  }
+  li{
+      padding: 0 1vw 0 0;
+  }
+  .switch01{
+    float: left;
+    margin-left: 10vw;
+    margin-bottom: 3vw;
+    padding: 1vw;
+    text-decoration: none;
+    text-align: center;
+    width: 10vw;
+    border: none;
+    color: #ffffff;
+    background-color:#5b71d3;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+}
+.switch02{
+  float: right;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 10vw;
+  margin-bottom: 3vw;
+  padding: 1vw;
+  width: 10vw;
+  border: none;
+  color: #ffffff;
+  background-color:#5b71d3;
+  font-size: 1.2vw;
+  border-radius: 0.5vw;
+}   
