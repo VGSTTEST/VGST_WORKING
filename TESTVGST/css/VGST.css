@@ -1,18 +1,22 @@
 body {
   font-family: "Open Sans", helvetica, arial;
   text-align: justify center;
-  background: -webkit-radial-gradient(rgb(59, 59, 216) 20%, #ffffff 100%);   
+  background-color: rgb(22, 22, 22);
    margin: 1vw;
+   color: #fff;
   border-radius: 1vw;
   padding: 3vw;
   background-repeat: no-repeat;
     }
+    form{
+      background-color: #ffffff34;
+      padding: 2px;
+    }
    table{
     padding: 1vw;
     margin: auto;
-    width: "100%";
     border-collapse: collapse;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(15, 15, 15, 0.836);
     font-size: 14px;
     }
 
@@ -27,18 +31,17 @@ body {
     }
    table th {
     padding: 1vw;
-    background: rgb(86, 93, 160);
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 1.5vw;     
+    font-size: 1.5vw;  
    }
-   table td, th {
+   table td {
     padding: 1vw 1vw 1vw 1vw;
-    border: 0.1vw solid  rgb(236, 237, 248);
     font-size: 1.5vw;
-   }
+      }
    table tr:nth-of-type(even) {
-    background: #eee;
+    background: rgba(255, 255, 255, 0.103);
    }
     
    .css-serial {
@@ -122,12 +125,13 @@ body {
 
 table td,th {
 padding: 1vw 1vw 1vw 1vw;
-border: 1px solid rgb(255, 255, 255);
 font-size: 2.5vw;
-width: 50vw;
 }
 table .unique{
 width: 1vw;
+}
+form{
+  padding: 20px;
 }
 }
 
@@ -141,7 +145,7 @@ width: 1vw;
   width: 10vw;
   border: none;
   color: #ffffff;
-  background-color:#5b71d3;
+  background-color:#ffffff54;
   font-size: 1.2vw;
   border-radius: 0.5vw;
 }
@@ -156,7 +160,7 @@ padding: 1vw;
 width: 10vw;
 border: none;
 color: #ffffff;
-background-color:#5b71d3;
+background-color:#ffffff54;
 font-size: 1.2vw;
 border-radius: 0.5vw;
 }   
@@ -168,13 +172,14 @@ a{
 {
   margin-left: 40.5vw;
   margin-top: 1vw;
+  margin-bottom: 5px;
   text-decoration: none;
   text-align: center;
-  padding: 1vw;
+  padding: 10px;
   width: 10vw;
   border: none;
   color: #ffffff;
-  background-color:#8b8b8b;
+  background-color:#5d5d5d;
   font-size: 1.2vw;
   border-radius: 0.5vw;
 }
