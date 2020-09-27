@@ -8,6 +8,16 @@ body {
   padding: 3vw;
   background-repeat: no-repeat;
     }
+
+
+    input , textarea{
+      height: 30px;
+      width: 300px;
+    }
+    .radio{
+      width:20px;
+     }
+  
     form{
       background-color: #ffffff34;
       padding: 2px;
