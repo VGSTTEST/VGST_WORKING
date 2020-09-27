@@ -170,4 +170,17 @@ body{
     color: rgb(59, 59, 59);
     text-align: center;
 }
+.create{
+    height: 40px;
+    width: 250px;
+    color: #ffffff;
+    border: none;
+    background-color: rgba(96, 192, 66, 0.787);
+    border-radius: 5px;
+    margin-left: 190px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 2vw;
+}
 }
