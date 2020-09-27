@@ -12,7 +12,8 @@ body {
 
     input , textarea{
       height: 30px;
-      width: 300px;
+      width: 250px;
+      border: none;
     }
     .radio{
       width:20px;
