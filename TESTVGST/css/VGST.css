@@ -145,38 +145,41 @@ form{
 }
 }
 
+
 .switch01{
   float: left;
+  margin-top: 20px;
   margin-left: 10vw;
   margin-bottom: 3vw;
-  padding: 1vw;
+  padding: 13px;
   text-decoration: none;
   text-align: center;
-  width: 10vw;
+  width: 150px;
   border: none;
   color: #ffffff;
-  background-color:#ffffff54;
+  background-color:#ffffff2d;
   font-size: 1.2vw;
   border-radius: 0.5vw;
 }
-
+a{
+  text-decoration: none;
+}
 .switch02{
 float: right;
 text-decoration: none;
 text-align: center;
+margin-top: 20px;
 margin-right: 10vw;
 margin-bottom: 3vw;
 padding: 1vw;
-width: 10vw;
+width: 150px;
 border: none;
 color: #ffffff;
-background-color:#ffffff54;
+background-color:#ffffff2d;
 font-size: 1.2vw;
 border-radius: 0.5vw;
 }   
-a{
-  text-decoration: none;
-}
+
 
 .submit
 {
