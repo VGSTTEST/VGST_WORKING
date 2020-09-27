@@ -110,6 +110,7 @@ body {
   }
   .da{
     font-size: 1vw;
+    width: 180px;
   }
 
   .edate{
@@ -179,6 +180,7 @@ background-color:#ffffff2d;
 font-size: 1.2vw;
 border-radius: 0.5vw;
 }   
+
 
 
 .submit
