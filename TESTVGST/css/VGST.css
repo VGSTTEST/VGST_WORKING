@@ -21,6 +21,8 @@ body {
     form{
       background-color: #ffffff34;
       padding: 2px;
+      width: fit-content;
+      margin: auto;
     }
    table{
     padding: 1vw;
@@ -131,20 +133,6 @@ body {
   float:left;
   display:block;
   }
-
-@media only screen and (max-width: 1080px) {
-
-table td,th {
-padding: 1vw 1vw 1vw 1vw;
-font-size: 2.5vw;
-}
-table .unique{
-width: 1vw;
-}
-form{
-  padding: 20px;
-}
-}
 
 
 .switch01{
