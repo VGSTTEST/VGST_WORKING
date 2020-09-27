@@ -17,13 +17,14 @@ body{
     }
     .IMG{ 
         float: left;
-        width: 30px;
-        padding: 10px 15px;
+        width: 45px;
+        margin-top: 9px;
+        margin-left: 25px;
     }
       .atag  {
         color: #f2f2f2;
         text-align: center;
-        padding: 14px 16px;
+        padding: 20px 16px;
         text-decoration: none;
         font-size: 17px;
         width: 80px;
@@ -38,10 +39,10 @@ body{
     }
 
     .active {
-    background-color: #4c5baf;
+    background-color: #54af4c;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
     font-size: 17px;
     width: 80px;
@@ -53,7 +54,7 @@ body{
         text-decoration: none;
         font-size: 17px;
         width: 40px;
-        padding: 11.5px 4px;
+        padding: 20px 16px;
         display: inline-block;
     }
 
@@ -73,7 +74,7 @@ body{
       .sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 35px;
         color: #818181;
         display: block;
         transition: 0.3s;
@@ -98,9 +99,14 @@ body{
       }
 
       .topnav {
-        overflow: hidden;
-        background-color: #333;
-        padding: 0%;
+        list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
       }
 
       .content{
