@@ -26,9 +26,8 @@ body{
         text-align: center;
         padding: 20px 16px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 15px;
         width: 80px;
-        display: inline-block;
       }
       .atag:hover,.btn:hover{
         background-color: #ddd;
@@ -44,18 +43,15 @@ body{
     text-align: center;
     padding: 23px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     width: 80px;
-    display: inline-block;
     }
     .btn{
         color: #f2f2f2;
         text-align: center;
         text-decoration: none;
-        font-size: 17px;
-        width: 40px;
-        padding: 20px 16px;
-        display: inline-block;
+        font-size: 30px;
+        padding: 10px 30px;
     }
 
     .sidenav {
