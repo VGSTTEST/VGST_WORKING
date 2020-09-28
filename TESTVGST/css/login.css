@@ -71,6 +71,8 @@ body{
     color: rgb(238, 67, 67);
     margin-bottom: 30px;
 }
+
+
 .problem{
     text-align: center;
 }
@@ -96,6 +98,6 @@ body{
 }
 
 
-#verifypassword,#logout,#signUp,#start2,#otp,#login{
+#verifypassword,#logout,#signUp,#start2,#otp,#next{
     display: none;
 }
