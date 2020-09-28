@@ -108,8 +108,10 @@ var firebaseConfig = {
 		document.getElementById("temail").style.display = "block";
 		document.getElementById("tpassword").style.display = "block";
 		document.getElementById("signUp").style.display = "none";
-		document.getElementById("next").style.display = "block";
 		document.getElementById("otp").style.display = "none";
+		document.getElementById("next").style.display = "block";
+
+
 	  }
 	  function refresh(){
 		document.getElementById("login").style.display = "block";
@@ -118,6 +120,12 @@ var firebaseConfig = {
 		document.getElementById("reg").style.display = "inline";
 		document.getElementById("start2").style.display = "none";
 		document.getElementById("start1").style.display = "block";
+		document.getElementById("temail").style.display = "block";
+		document.getElementById("tpassword").style.display = "block";
+		document.getElementById("signUp").style.display = "none";
+		document.getElementById("otp").style.display = "none";
+		document.getElementById("next").style.display = "none";
+
 
 	  }
 
@@ -127,5 +135,7 @@ var firebaseConfig = {
 		document.getElementById("tpassword").style.display = "none";
 		document.getElementById("otp").style.display = "block";
 		document.getElementById("next").style.display = "none";
-		document.getElementById("login").style.display = "block";
+		document.getElementById("login").style.display = "none";
+		document.getElementById("signUp").style.display = "block";
+
 	  }
