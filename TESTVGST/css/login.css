@@ -16,7 +16,7 @@ body{
     color:  rgb(59, 59, 59);
     margin-top: 12px;
 }
-.enter{
+.enter, #verifypassword{
     border: none;
     border-radius: 5px;
     width: 300px;
@@ -26,21 +26,23 @@ body{
     font-size: 17px;
 }
 
-.login{
+#login,#logout, #signUp,#next{
     height: 40px;
     width: 130px;
     color: #ffffff;
     border: none;
     background-color: rgba(96, 192, 66, 0.787);
     border-radius: 5px;
-    margin-left: 115px;
+    margin-left: 80px;
     text-decoration: none;
     font-size: 15px;
     padding: 5px;
     margin-top: 2vw;
 }
 
-.signup{
+
+
+.class{
     height: 30px;
     width: 80px;
     color: #ffffff;
@@ -49,6 +51,7 @@ body{
     border-radius: 5px;
     margin-top: 10px;
 }
+
 .google{
     height: 40px;
     width: 310px;
@@ -59,7 +62,7 @@ body{
     margin-top: 10px;
 }
 
-.start{
+#start1,#start2{
     border: #ff4848a9 solid;
     border-top: #00000000;
     border-left:  #00000000;
@@ -68,12 +71,6 @@ body{
     color: rgb(238, 67, 67);
     margin-bottom: 30px;
 }
-.or{
-    font-size: 20px;
-    color: rgb(59, 59, 59);
-    text-align: center;
-}
-
 .problem{
     text-align: center;
 }
@@ -94,93 +91,11 @@ body{
     margin-top: 2vw;
 }
 
-
-
-
-@media only screen and (max-width: 1080px) {
-
-body{
-    background-image: url(../css/Images/smallVGST.jpg);
-    background-repeat: no-repeat;
-    padding: 8vw;
-    background-size: 150%;
-
+#hidden{
+    display: none;
 }
 
-.Setup{
-    background-color: rgba(255, 241, 241, 0.76);
-    border-radius: 10px;
-    font-size: 25px;
-    font-weight: bolder;
-    margin: auto;
-    padding: 3vw;   
-    color:  rgb(59, 59, 59);
-    margin-top: 12px;
-}
-.enter{
-    border: none;
-    border-radius: 5px;
-    width: 500px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.787);
-    padding: 5px;
-}
 
-.login{
-    height: 30px;
-    width: 120px;
-    color: #ffffff;
-    border: none;
-    background-color: rgba(96, 192, 66, 0.787);
-    border-radius: 5px;
-    margin-left: 210px;
-    margin-top: 15px;
-}
-
-.signup{
-    height: 30px;
-    width: 80px;
-    color: #ffffff;
-    border: none;
-    background-color: rgba(255, 36, 36, 0.726);
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.google{
-    height: 40px;
-    width: 500px;
-    color: #ffffff;
-    border: none;
-    background-color: rgba(55, 80, 189, 0.671);
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.start{
-    border: #ff4848a9 solid;
-    border-top: #00000000;
-    border-left:  #00000000;
-    border-right:  #00000000;
-    font-size: 25px;
-    color: rgb(238, 67, 67);
-    margin-bottom: 30px;
-}
-.or{
-    font-size: 20px;
-    color: rgb(59, 59, 59);
-    text-align: center;
-}
-.create{
-    height: 40px;
-    width: 250px;
-    color: #ffffff;
-    border: none;
-    background-color: rgba(96, 192, 66, 0.787);
-    border-radius: 5px;
-    margin-left: 190px;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 5px;
-    margin-top: 2vw;
-}
+#verifypassword,#logout,#signUp,#start2,#otp,#login{
+    display: none;
 }
