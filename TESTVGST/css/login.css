@@ -101,3 +101,13 @@ body{
 #verifypassword,#logout,#signUp,#start2,#otp,#next{
     display: none;
 }
+@media only screen and (max-width: 1080px) {
+
+    body{
+        background-image: url(../css/Images/smallVGST.jpg);
+        background-repeat: no-repeat;
+        padding: 8vw;
+        background-size: 150%;
+    
+    }
+}    
