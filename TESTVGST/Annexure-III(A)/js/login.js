@@ -27,7 +27,18 @@ var firebaseConfig = {
 		const auth 		= firebase.auth();
 		const promise 	= auth.createUserWithEmailAndPassword(email,password);
 		promise.catch(e => console.log(e.message));
-		alert("Signed Up");
+		document.getElementById("login").style.display = "block";
+		document.getElementById("verifypassword").style.display = "none";
+		document.getElementById("reg").style.display = "inline";
+		document.getElementById("start2").style.display = "none";
+		document.getElementById("start1").style.display = "block";
+		document.getElementById("temail").style.display = "block";
+		document.getElementById("tpassword").style.display = "block";
+		document.getElementById("signUp").style.display = "none";
+		document.getElementById("otp").style.display = "none";
+		document.getElementById("next").style.display = "none";
+		document.getElementById("logout").style.display = "none";
+
 	});
 			
 	login.addEventListener('click',e =>{
@@ -36,14 +47,28 @@ var firebaseConfig = {
         const auth 		= firebase.auth();
 		const promise 	= auth.signInWithEmailAndPassword(email,password);
 		promise.catch(e =>alert(e.message));
-		alert("Signed in");
 	});
 
 
 	logout.addEventListener('click',e =>{		
 		firebase.auth().signOut();
 		alert("Signed Out");
-		
+		document.getElementById("login").style.display = "block";
+		document.getElementById("verifypassword").style.display = "none";
+		document.getElementById("reg").style.display = "inline";
+		document.getElementById("start2").style.display = "none";
+		document.getElementById("start1").style.display = "block";
+		document.getElementById("temail").style.display = "block";
+		document.getElementById("tpassword").style.display = "block";
+		document.getElementById("signUp").style.display = "none";
+		document.getElementById("otp").style.display = "none";
+		document.getElementById("next").style.display = "none";
+		document.getElementById("logout").style.display = "none";
+		document.getElementById("signInWithGoogle").style.display = "block";
+		document.getElementById("start3").style.display = "none";
+		document.getElementById("getget").style.display = "none";
+
+
 	});
 
 
@@ -52,11 +77,11 @@ var firebaseConfig = {
 		var errorMessage = error.message;
 	  });
 
-	  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
 		var errorCode    = error.code;
 		var errorMessage = error.message;
 	  });
-	  firebase.auth().createUserWithEmailAndPassword(email, password)
+firebase.auth().createUserWithEmailAndPassword(email, password)
 				.catch(function(error) {
 				var errorCode = error.code;
 				var errorMessage = error.message;
@@ -67,21 +92,42 @@ var firebaseConfig = {
 				}
 				console.log(error);
 		});
+
+		var user = firebase.auth().currentUser;
 	
-	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if(firebaseUser){
-			
-			var email = firebaseUser.email;
-			alert("Active User " + email);
-			console.log(firebaseUser);
-			
-			
-		}else{
-			
-			alert("No Active User");
-		}
-	});
-		
+		firebase.auth().onAuthStateChanged(function(user) {
+			if (user != null) {
+				user.providerData.forEach(function (profile) {
+				  console.log("Sign-in provider: " + profile.providerId);
+				  document.getElementById('getget').innerHTML="  Provider-specific UID: " + profile.uid;
+				  console.log("  Name: " + profile.displayName);
+				  document.getElementById('getget').innerHTML="  Email: " + profile.email;
+				  console.log("  Photo URL: " + profile.photoURL);
+
+				  document.getElementById("signInWithGoogle").style.display = "none";
+				  document.getElementById("login").style.display = "none";
+				  document.getElementById("verifypassword").style.display = "none";
+				  document.getElementById("reg").style.display = "none";
+				  document.getElementById("start3").style.display = "block";
+				  document.getElementById("start2").style.display = "none";
+				  document.getElementById("start1").style.display = "none";
+				  document.getElementById("temail").style.display = "none";
+				  document.getElementById("tpassword").style.display = "none";
+				  document.getElementById("signUp").style.display = "none";
+				  document.getElementById("otp").style.display = "none";
+				  document.getElementById("next").style.display = "none";
+				  document.getElementById("next").style.display = "none";
+				  document.getElementById("logout").style.display = "block";
+
+				});
+			  }
+			  else {
+			  // User is signed out.
+			  // ...
+			  alert("Signed Out");
+			}
+		  });
+				  
 	const signInWithGoogleButton = document.getElementById('signInWithGoogle');
 
 	const signInWithGoogle = () => {
@@ -98,9 +144,9 @@ var firebaseConfig = {
 	  
 	  signInWithGoogleButton.addEventListener('click', signInWithGoogle);
 
+
 	  function myFunction() {
 		document.getElementById("login").style.display = "none";
-		document.getElementById("signUp").style.display = "block";
 		document.getElementById("verifypassword").style.display = "block";
 		document.getElementById("reg").style.display = "none";
 		document.getElementById("start2").style.display = "block";
@@ -110,21 +156,8 @@ var firebaseConfig = {
 		document.getElementById("signUp").style.display = "none";
 		document.getElementById("otp").style.display = "none";
 		document.getElementById("next").style.display = "block";
-
-
-	  }
-	  function refresh(){
-		document.getElementById("login").style.display = "block";
-		document.getElementById("signUp").style.display = "none";
-		document.getElementById("verifypassword").style.display = "none";
-		document.getElementById("reg").style.display = "inline";
-		document.getElementById("start2").style.display = "none";
-		document.getElementById("start1").style.display = "block";
-		document.getElementById("temail").style.display = "block";
-		document.getElementById("tpassword").style.display = "block";
-		document.getElementById("signUp").style.display = "none";
-		document.getElementById("otp").style.display = "none";
-		document.getElementById("next").style.display = "none";
+		document.getElementById("start3").style.display = "none";
+		document.getElementById("getget").style.display = "none";
 
 
 	  }
@@ -137,5 +170,9 @@ var firebaseConfig = {
 		document.getElementById("next").style.display = "none";
 		document.getElementById("login").style.display = "none";
 		document.getElementById("signUp").style.display = "block";
-
 	  }
+
+
+//verify stuffs
+
+
