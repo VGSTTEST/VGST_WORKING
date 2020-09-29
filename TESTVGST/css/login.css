@@ -18,7 +18,7 @@ table{
     border: none;
     margin: 2px;
     border-radius: 5px;
-    width: 300px;
+    width: 350px;
     height: 30px;
     background-color: rgba(241, 241, 241, 0.787);
     padding: 5px;
@@ -28,7 +28,7 @@ table{
 
 #login,#logout,#signUp,#next{
     height: 40px;
-    width: 312px;
+    width: 362px;
     color: #ffffff;
     border: none;
     background-color: rgba(96, 192, 66, 0.787);
@@ -52,7 +52,7 @@ table{
 
 .google{
     height: 40px;
-    width: 310px;
+    width: 360px;
     color: #ffffff;
     border: none;
     background-color: rgba(55, 80, 189, 0.671);
