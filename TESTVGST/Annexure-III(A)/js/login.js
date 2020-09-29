@@ -17,8 +17,6 @@ var firebaseConfig = {
 		const tpassword = document.getElementById('tpassword');
 		const signUp 	= document.getElementById('signUp');
 		const login 	= document.getElementById('login');
-		const email 	= temail.value;
-		const password 	= tpassword.value;
 
 
 	signUp.addEventListener('click',e =>{
@@ -26,62 +24,8 @@ var firebaseConfig = {
 		const password 	= tpassword.value;
 		const auth 		= firebase.auth();
 		const promise 	= auth.createUserWithEmailAndPassword(email,password);
-		promise.catch(e => console.log(e.message));
-		document.getElementById("login").style.display = "block";
-		document.getElementById("verifypassword").style.display = "none";
-		document.getElementById("reg").style.display = "inline";
-		document.getElementById("start2").style.display = "none";
-		document.getElementById("start1").style.display = "block";
-		document.getElementById("temail").style.display = "block";
-		document.getElementById("tpassword").style.display = "block";
-		document.getElementById("signUp").style.display = "none";
-		document.getElementById("otp").style.display = "none";
-		document.getElementById("next").style.display = "none";
-		document.getElementById("logout").style.display = "none";
 
-	});
-			
-	login.addEventListener('click',e =>{
-		const email 	= temail.value;
-		const password 	= tpassword.value;
-        const auth 		= firebase.auth();
-		const promise 	= auth.signInWithEmailAndPassword(email,password);
-		promise.catch(e =>alert(e.message));
-	});
-
-
-	logout.addEventListener('click',e =>{		
-		firebase.auth().signOut();
-		alert("Signed Out");
-		document.getElementById("login").style.display = "block";
-		document.getElementById("verifypassword").style.display = "none";
-		document.getElementById("reg").style.display = "inline";
-		document.getElementById("start2").style.display = "none";
-		document.getElementById("start1").style.display = "block";
-		document.getElementById("temail").style.display = "block";
-		document.getElementById("tpassword").style.display = "block";
-		document.getElementById("signUp").style.display = "none";
-		document.getElementById("otp").style.display = "none";
-		document.getElementById("next").style.display = "none";
-		document.getElementById("logout").style.display = "none";
-		document.getElementById("signInWithGoogle").style.display = "block";
-		document.getElementById("start3").style.display = "none";
-		document.getElementById("getget").style.display = "none";
-
-
-	});
-
-
-	firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-		var errorCode 	 = error.code;
-		var errorMessage = error.message;
-	  });
-
-firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-		var errorCode    = error.code;
-		var errorMessage = error.message;
-	  });
-firebase.auth().createUserWithEmailAndPassword(email, password)
+		firebase.auth().createUserWithEmailAndPassword(email, password)
 				.catch(function(error) {
 				var errorCode = error.code;
 				var errorMessage = error.message;
@@ -93,38 +37,87 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
 				console.log(error);
 		});
 
+		firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+			var errorCode 	 = error.code;
+			var errorMessage = error.message;
+		  });	
+		promise.catch(e => console.log(e.message));
+		document.getElementById("login").style.display 			= "block";
+		document.getElementById("verifypassword").style.display = "none";
+		document.getElementById("reg").style.display 			= "block";
+		document.getElementById("start2").style.display 		= "none";
+		document.getElementById("start1").style.display 		= "block";
+		document.getElementById("temail").style.display 		= "block";
+		document.getElementById("tpassword").style.display 		= "block";
+		document.getElementById("signUp").style.display 		= "none";
+		document.getElementById("otp").style.display 			= "none";
+		document.getElementById("next").style.display 			= "none";
+		document.getElementById("logout").style.display 		= "none";
+
+	});
+			
+	login.addEventListener('click',e =>{
+		const email 	= temail.value;
+		const password 	= tpassword.value;
+		const auth 		= firebase.auth();
+		const promise 	= auth.signInWithEmailAndPassword(email,password);
+		promise.catch(e =>alert(e.message));
+		firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+			var errorCode    = error.code;
+			var errorMessage = error.message;
+		  });
+	
+	});
+
+	logout.addEventListener('click',e =>{		
+		firebase.auth().signOut();
+		alert("Signed Out");
+		document.getElementById("start3").style.display 	= "none";
+		document.getElementById("logout").style.display 	= "none";
+		document.getElementById("login").style.display 		= "block";
+		document.getElementById("reg").style.display 		= "block";
+		document.getElementById("start2").style.display 	= "none";
+		document.getElementById("start1").style.display 	= "block";
+		document.getElementById("temail").style.display 	= "block";
+		document.getElementById("tpassword").style.display 	= "block";
+		document.getElementById("signUp").style.display		= "none";
+		document.getElementById("next").style.display 		= "none";
+		document.getElementById("signInWithGoogle").style.display 	= "block";
+		document.getElementById("getget").style.display 	= "none";
+	});
+
+
+
+
 		var user = firebase.auth().currentUser;
 	
 		firebase.auth().onAuthStateChanged(function(user) {
 			if (user != null) {
 				user.providerData.forEach(function (profile) {
+					emailVerified = user.emailVerified;
 				  console.log("Sign-in provider: " + profile.providerId);
-				  document.getElementById('getget').innerHTML="  Provider-specific UID: " + profile.uid;
 				  console.log("  Name: " + profile.displayName);
-				  document.getElementById('getget').innerHTML="  Email: " + profile.email;
+				  document.getElementById('getget').innerHTML="Email: " + profile.email + " <br>varified status: " + user.emailVerified;
 				  console.log("  Photo URL: " + profile.photoURL);
-
+				  document.getElementById("logout").style.display 			= "block";
 				  document.getElementById("signInWithGoogle").style.display = "none";
-				  document.getElementById("login").style.display = "none";
-				  document.getElementById("verifypassword").style.display = "none";
-				  document.getElementById("reg").style.display = "none";
-				  document.getElementById("start3").style.display = "block";
-				  document.getElementById("start2").style.display = "none";
-				  document.getElementById("start1").style.display = "none";
-				  document.getElementById("temail").style.display = "none";
-				  document.getElementById("tpassword").style.display = "none";
-				  document.getElementById("signUp").style.display = "none";
-				  document.getElementById("otp").style.display = "none";
-				  document.getElementById("next").style.display = "none";
-				  document.getElementById("next").style.display = "none";
-				  document.getElementById("logout").style.display = "block";
+				  document.getElementById("login").style.display 			= "none";
+				  document.getElementById("verifypassword").style.display 	= "none";
+				  document.getElementById("reg").style.display 				= "none";
+				  document.getElementById("start3").style.display 			= "block";
+				  document.getElementById("start2").style.display 			= "none";
+				  document.getElementById("start1").style.display 			= "none";
+				  document.getElementById("temail").style.display 			= "none";
+				  document.getElementById("tpassword").style.display 		= "none";
+				  document.getElementById("signUp").style.display 			= "none";
+				  document.getElementById("otp").style.display 				= "none";
+				  document.getElementById("next").style.display 			= "none";
 
 				});
 			  }
 			  else {
 			  // User is signed out.
 			  // ...
-			  alert("Signed Out");
 			}
 		  });
 				  
@@ -146,33 +139,33 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
 
 
 	  function myFunction() {
-		document.getElementById("login").style.display = "none";
+		document.getElementById("login").style.display 			= "none";
 		document.getElementById("verifypassword").style.display = "block";
-		document.getElementById("reg").style.display = "none";
-		document.getElementById("start2").style.display = "block";
-		document.getElementById("start1").style.display = "none";
-		document.getElementById("temail").style.display = "block";
-		document.getElementById("tpassword").style.display = "block";
-		document.getElementById("signUp").style.display = "none";
-		document.getElementById("otp").style.display = "none";
-		document.getElementById("next").style.display = "block";
-		document.getElementById("start3").style.display = "none";
-		document.getElementById("getget").style.display = "none";
+		document.getElementById("reg").style.display 			= "none";
+		document.getElementById("start2").style.display 		= "block";
+		document.getElementById("start1").style.display 		= "none";
+		document.getElementById("temail").style.display 		= "block";
+		document.getElementById("tpassword").style.display 		= "block";
+		document.getElementById("signUp").style.display 		= "block";
+		document.getElementById("otp").style.display 			= "none";
+		document.getElementById("next").style.display 			= "block";
+		document.getElementById("start3").style.display 		= "none";
+		document.getElementById("getget").style.display 		= "none";
 
 
 	  }
 
 	  function enterotp(){
 		document.getElementById("verifypassword").style.display = "none";
-		document.getElementById("temail").style.display = "none";
-		document.getElementById("tpassword").style.display = "none";
-		document.getElementById("otp").style.display = "block";
-		document.getElementById("next").style.display = "none";
-		document.getElementById("login").style.display = "none";
-		document.getElementById("signUp").style.display = "block";
+		document.getElementById("temail").style.display 	= "none";
+		document.getElementById("tpassword").style.display 	= "none";
+		document.getElementById("otp").style.display 		= "block";
+		document.getElementById("next").style.display 		= "none";
+		document.getElementById("login").style.display 		= "none";
+		document.getElementById("signUp").style.display 	= "block";
 	  }
 
 
-//verify stuffs
+//verify stuffs for xxxxx
 
 
