@@ -17,16 +17,18 @@
 
 
   var userId = firebase.auth().currentUser.uid;
+console.log(userId);
+/*
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var Title_of_the_project               = (snapshot.val() && snapshot.val().Title_of_the_project) || 'NULL';
     var Subject_area_as_per_instruction    = (snapshot.val() && snapshot.val(). Subject_area_as_per_instruction) || 'NULL';
-  });
+  });*/
 
 
 
   
 // Reference messages collection
-var messagesRef = firebase.database().ref('Aadhar/Annexure_3/'); 
+var messagesRef = firebase.database().ref('UserId'); 
 
 // Listen for form submit
 document.getElementById('Proposals').addEventListener('submit', submitForm);
