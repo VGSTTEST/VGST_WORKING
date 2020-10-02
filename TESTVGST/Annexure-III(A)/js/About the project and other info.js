@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged(function(user) {
           console.log("  Name: " + profile.displayName);
          userId1 = profile.uid;
          console.log("  uid: " + userId1);
-          console.log("Email: " + profile.email + "varified status: " + user.emailVerified);
+          console.log("Email: " + profile.email + "\nvarified status: " + user.emailVerified);
           console.log("  Photo URL: " + profile.photoURL);
 
         });
@@ -50,7 +50,7 @@ console.log(userId1);
 
   
 // Reference messages collection
-var messagesRef = firebase.database().ref(userId1); 
+var messagesRef = firebase.database().ref('proposals'+userId1); 
 
 // Listen for form submit
 document.getElementById('Proposals').addEventListener('submit', submitForm);
