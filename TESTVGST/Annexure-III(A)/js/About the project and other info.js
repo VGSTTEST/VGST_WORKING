@@ -16,13 +16,34 @@
   firebase.analytics();
 
 
-  //var userId = firebase.auth().currentUser.uid;
+var userId = firebase.auth().currentUser.uid;
+
+var user = firebase.auth().currentUser;
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user != null) {
+        user.providerData.forEach(function (profile) {
+            emailVerified = user.emailVerified;
+          console.log("Sign-in provider: " + profile.providerId);
+          console.log("  Name: " + profile.displayName);
+          console.log("Email: " + profile.email + "varified status: " + user.emailVerified);
+          console.log("  Photo URL: " + profile.photoURL);
+
+        });
+      }
+      else {
+      // User is signed out.
+      // ...
+    }
+  });
+
 console.log();
-/*
+
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var Title_of_the_project               = (snapshot.val() && snapshot.val().Title_of_the_project) || 'NULL';
     var Subject_area_as_per_instruction    = (snapshot.val() && snapshot.val(). Subject_area_as_per_instruction) || 'NULL';
-  });*/
+  });
 
 
 
