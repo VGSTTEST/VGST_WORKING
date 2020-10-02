@@ -27,6 +27,8 @@ firebase.auth().onAuthStateChanged(function(user) {
             emailVerified = user.emailVerified;
           console.log("Sign-in provider: " + profile.providerId);
           console.log("  Name: " + profile.displayName);
+         console.log("  UID: " + profile.UID);
+         console.log("  uid: " + profile.uid);
           console.log("Email: " + profile.email + "varified status: " + user.emailVerified);
           console.log("  Photo URL: " + profile.photoURL);
 
@@ -37,7 +39,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // ...
     }
   });
-
+var user = result.user;
 console.log(user);
 /*
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
