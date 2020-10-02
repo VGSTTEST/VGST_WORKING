@@ -16,8 +16,8 @@
   firebase.analytics();
 
 
-//var userId = firebase.auth().currentUser.uid;
-
+var userId = firebase.auth().currentUser.uid;
+console.log(userId);
 var user = firebase.auth().currentUser;
 
 
@@ -39,7 +39,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       // ...
     }
   });
-var user = result.user;
 console.log(user);
 /*
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
