@@ -16,8 +16,8 @@
   firebase.analytics();
 
 
-  var userId = firebase.auth().currentUser.uid;
-console.log(userId);
+  //var userId = firebase.auth().currentUser.uid;
+console.log();
 /*
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var Title_of_the_project               = (snapshot.val() && snapshot.val().Title_of_the_project) || 'NULL';
