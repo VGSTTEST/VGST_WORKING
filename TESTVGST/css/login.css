@@ -1,15 +1,24 @@
 body{
-    background-color: #ffffff;
-    padding: 7vw;
+    background-image: url(../css/Images/VGST.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 5vw;
 }
-#getget{
-    font-size: 18px;
-}
+@media only screen and (max-width: 1080px) {
+
+    body{
+        background-image: url(../css/Images/smallVGST.jpg);
+        background-repeat: no-repeat;
+        padding: 8vw;
+        background-size: 150%;
+    
+    }
+}    
 table{
     margin: auto;
 }
 .Setup{
-    background-color: rgba(255, 255, 255, 0.109);
+    background-color: rgba(255, 255, 255, 0.644);
     border-radius: 5px;
     font-size: 20px;
     font-weight: bolder;
@@ -23,10 +32,13 @@ table{
     border-radius: 5px;
     width: 350px;
     height: 30px;
-    background-color: rgba(241, 241, 241, 0.787);
+    background-color: rgba(241, 241, 241, 0.938);
     padding: 5px;
     font-size: 17px;
     display: block;
+}
+#getget{
+    font-size: 18px;
 }
 
 #login,#logout,#signUp,#next{
@@ -48,7 +60,7 @@ table{
     width: 80px;
     color: #ffffff;
     border: none;
-    background-color: rgba(255, 36, 36, 0.726);
+    background-color: rgba(255, 36, 36, 0.897);
     border-radius: 5px;
 }
 
@@ -58,7 +70,7 @@ table{
     width: 360px;
     color: #ffffff;
     border: none;
-    background-color: rgba(55, 80, 189, 0.671);
+    background-color: rgb(55, 80, 189);
     border-radius: 5px;
     margin: 2px;
 }
