@@ -16,7 +16,7 @@
   firebase.analytics();
 
 
-var userId ;
+var userId1 ;
 
 var user = firebase.auth().currentUser;
 
@@ -27,8 +27,8 @@ firebase.auth().onAuthStateChanged(function(user) {
             emailVerified = user.emailVerified;
           console.log("Sign-in provider: " + profile.providerId);
           console.log("  Name: " + profile.displayName);
-         userId = profile.uid;
-         console.log("  uid: " + profile.uid);
+         userId1 = profile.uid;
+         console.log("  uid: " + userId1);
           console.log("Email: " + profile.email + "varified status: " + user.emailVerified);
           console.log("  Photo URL: " + profile.photoURL);
 
@@ -39,7 +39,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // ...
     }
   })
-console.log(userId);
+console.log(userId1);
 /*
   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
     var Title_of_the_project               = (snapshot.val() && snapshot.val().Title_of_the_project) || 'NULL';
@@ -50,7 +50,7 @@ console.log(userId);
 
   
 // Reference messages collection
-var messagesRef = firebase.database().ref(userId); 
+var messagesRef = firebase.database().ref(userId1); 
 
 // Listen for form submit
 document.getElementById('Proposals').addEventListener('submit', submitForm);
